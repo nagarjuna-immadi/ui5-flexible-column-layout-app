@@ -1,6 +1,7 @@
 sap.ui.define([
-	"sap/ui/core/mvc/Controller"
-], function (Controller) {
+	"sap/ui/core/mvc/Controller",
+	'sap/f/library'
+], function (Controller, fioriLibrary) {
 	"use strict";
 
 	return Controller.extend("sap.ui.demo.fcl.controller.DetailDetail", {
@@ -11,6 +12,10 @@ sap.ui.define([
 			this.oModel = oOwnerComponent.getModel();
 
 			this.oRouter.getRoute("detailDetail").attachPatternMatched(this._onPatternMatch, this);
+		},
+
+		handleAboutPress: function () {
+			this.oRouter.navTo("page2", {layout: fioriLibrary.LayoutType.EndColumnFullScreen});
 		},
 
 		_onPatternMatch: function (oEvent) {

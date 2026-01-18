@@ -40,6 +40,12 @@
 			},
 			"routes": [
 				{
+					"pattern": "page2",
+					"name": "page2",
+					"target": "page2",
+					"layout": "EndColumnFullScreen"
+				},
+				{
 					"pattern": ":layout:",
 					"name": "master",
 					"target": [
@@ -76,6 +82,10 @@
 				},
 				"detailDetail": {
 					"name": "DetailDetail",
+					"controlAggregation": "endColumnPages"
+				},
+				"page2": {
+					"name": "AboutPage",
 					"controlAggregation": "endColumnPages"
 				}
 			}
